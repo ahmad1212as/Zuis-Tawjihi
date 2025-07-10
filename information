@@ -1,29 +1,32 @@
-User 1:
-- Username: ahmad
-- Password: ahmad71@00
-- Phone Number: 0790767188
-- Security Code: 7108
-
-User 2:
-- Username: 2
-- Password: 2
-- Phone Number: 2
-- Security Code: 2
-
-User 3:
-- Username: 3
-- Password: 3
-- Phone Number: 3
-- Security Code: 3
-
-User 4:
-- Username: 4
-- Password: 4
-- Phone Number: 4
-- Security Code: 4
-
-User 5:
-- Username: 5
-- Password: 5
-- Phone Number: 5
-- Security Code: 5
+[
+  {
+    "username": "ahmad",
+    "password": "ahmad71@00",
+    "phone number": "0790767188",
+    "Security code": "7108"
+  },
+  {
+    "username": "2",
+    "password": "2",
+    "phone number": "2",
+    "Security code": "2"
+ },
+  {
+    "username": "3",
+    "password": "3",
+    "phone number": "3",
+    "Security code": "3"
+  },
+  {
+    "username": "4",
+    "password": "4",
+    "phone number": "4",
+    "Security code": "4"
+ },
+  {
+    "username": "5",
+    "password": "5",
+    "phone number": "5",
+    "Security code": "5"
+  }
+]
