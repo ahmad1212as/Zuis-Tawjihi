@@ -1,54 +1,106 @@
-<h1>Slider | <a href="http://creaticode.com/blog">Creaticode</a></h1>
-  <!-- ==================================== 
-  Contenedor Slider 
-  =======================================-->
-  <section id="slider" class="container">
-    <ul class="slider-wrapper">
-    <li class="current-slide">
-      <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>موقعي الشخصي</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
 
-      <div class="caption">
-        <h2 class="slider-title">Diseño web</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
-      </div>
-    </li>
+    header {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-    <li>
-      <img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
 
-      <div class="caption">
-        <h2 class="slider-title">Diseño Responsive</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
-      </div>
-    </li>
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
 
-    <li>
-      <img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
+    section {
+      padding: 30px 20px;
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-      <div class="caption">
-        <h2 class="slider-title">Identidad Corporativa</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
-      </div>
-    </li>
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
 
-    <li>
-      <img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
+    form button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-      <div class="caption">
-        <h2 class="slider-title">Desarrollo Web</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
-      </div>
-    </li>
-    </ul>
-    <!-- Sombras -->
-    <div class="slider-shadow"></div>
-    
-    <!-- Controles de Navegacion -->
-    <ul id="control-buttons" class="control-buttons"></ul>
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مرحباً، أنا مطوّر ويب</h1>
+    <p>هذا موقعي الشخصي بلغة HTML و CSS و JavaScript فقط</p>
+  </header>
+
+  <section id="contact">
+    <h2>تواصل معي</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="الاسم" required>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <textarea name="message" placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <p id="status"></p>
   </section>
-  
-  
-  <!-- Imagenes Copyright -->
-  <p class="authors">
-    Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
-  </p>
+
+  <script>
+    // محاكاة إرسال البيانات (بدون سيرفر حقيقي)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const email = this.email.value;
+      const message = this.message.value;
+
+      // عرض رسالة تم الإرسال
+      document.getElementById('status').innerText = "✅ تم استلام رسالتك بنجاح، شكرًا لك يا " + name + "!";
+      
+      // إعادة تعيين النموذج
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
