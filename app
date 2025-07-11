@@ -1,61 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Locked</title>
-    <style>
-        body {
-            background-color: red;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            text-align: center;
-        }
-        .header {
-            font-size: 4vw;
-            font-weight: bold;
-            margin-bottom: 2vh;
-        }
-        .warning-text {
-            font-size: 5vw;
-            font-weight: bold;
-            margin-bottom: 2vh;
-        }
-        .warning-icons {
-            font-size: 8vw;
-        }
-        .warning-icons::before {
-            content: ⚠️ ⚠️ ⚠️";
-        }
-    </style>
-</head>
-<body>
+<h1>Slider | <a href="http://creaticode.com/blog">Creaticode</a></h1>
+  <!-- ==================================== 
+  Contenedor Slider 
+  =======================================-->
+  <section id="slider" class="container">
+    <ul class="slider-wrapper">
+    <li class="current-slide">
+      <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="">
 
-    <div class="header" id="date-time"></div>
-    <div class="warning-text">
-        Page Locked. Contact the Owner
-    </div>
-    <div class="warning-icons"></div>
+      <div class="caption">
+        <h2 class="slider-title">Diseño web</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
+      </div>
+    </li>
 
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const dateTime = now.toLocaleString('en-US', {
-                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-                hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true
-            });
-            document.getElementById('date-time').textContent = dateTime;
-        }
+    <li>
+      <img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
 
-        updateDateTime();
-        setInterval(updateDateTime, 1000); // Update every second
-    </script>
+      <div class="caption">
+        <h2 class="slider-title">Diseño Responsive</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
+      </div>
+    </li>
 
-</body>
-</html>
+    <li>
+      <img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
+
+      <div class="caption">
+        <h2 class="slider-title">Identidad Corporativa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
+      </div>
+    </li>
+
+    <li>
+      <img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
+
+      <div class="caption">
+        <h2 class="slider-title">Desarrollo Web</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
+      </div>
+    </li>
+    </ul>
+    <!-- Sombras -->
+    <div class="slider-shadow"></div>
+    
+    <!-- Controles de Navegacion -->
+    <ul id="control-buttons" class="control-buttons"></ul>
+  </section>
+  
+  
+  <!-- Imagenes Copyright -->
+  <p class="authors">
+    Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
+  </p>
